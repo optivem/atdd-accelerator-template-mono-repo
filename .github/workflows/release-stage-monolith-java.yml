@@ -36,4 +36,4 @@ jobs:
       run: chmod +x ./gradlew
 
     - name: Run Smoke Tests
-      run: ./gradlew test --tests com.optivem.eshop.smoketest.*
+      run: ./gradlew test --tests com.optivem.atddaccelerator.template.systemtest.smoketest.*
