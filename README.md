@@ -11,7 +11,7 @@
 ## System Test
 
 [![release-stage-monolith-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-monolith-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-monolith-java.yml)
-[![release-stage-monolith-csharp](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-monolith-csharp.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-monolith-csharp.yml)
+[![release-stage-monolith-dotnet](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-monolith-dotnet.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-monolith-dotnet.yml)
 [![release-stage-monolith-typescript](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-monolith-typescript.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-monolith-typescript.yml)
 
 This is the ATDD Sandbox Project used within the [ATDD Accelerator Program](https://atdd-accelerator.optivem.com/) by [Valentina Jemuović](https://www.linkedin.com/in/valentinajemuovic/). We'll be using an eShop domain.
