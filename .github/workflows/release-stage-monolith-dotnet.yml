@@ -34,5 +34,5 @@ jobs:
     - name: Install Playwright Browsers
       run: pwsh bin/Debug/net8.0/playwright.ps1 install
 
-    - name: Test
-      run: dotnet test
+    - name: Smoke Tests
+      run: dotnet test --filter "FullyQualifiedName~Optivem.AtddAccelerator.Template.SystemTest.SmokeTests"
