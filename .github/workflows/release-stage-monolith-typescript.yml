@@ -30,7 +30,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: system-test/typescript/package-lock.json
+        cache-dependency-path: system-test-typescript/package-lock.json
     
     - run: npm ci
 
