@@ -5,15 +5,7 @@
 ## System
 
 [![commit-stage-monolith-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/commit-stage-monolith-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/commit-stage-monolith-java.yml)
-<<<<<<< HEAD
-[![release-stage-monolith-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-monolith-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-monolith-java.yml)
-
 [![commit-stage-monolith-dotnet](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/commit-stage-monolith-dotnet.yaml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/commit-stage-monolith-dotnet.yaml)
-[![release-stage-monolith-dotnet](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-monolith-dotnet.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-monolith-dotnet.yml)
-
-=======
-[![commit-stage-monolith-csharp](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/commit-stage-monolith-csharp.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/commit-stage-monolith-csharp.yml)
->>>>>>> a3332baf931fab25fc14a59bc2070f6228c07733
 [![commit-stage-monolith-typescript](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/commit-stage-monolith-typescript.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/commit-stage-monolith-typescript.yml)
 
 ## System Test
