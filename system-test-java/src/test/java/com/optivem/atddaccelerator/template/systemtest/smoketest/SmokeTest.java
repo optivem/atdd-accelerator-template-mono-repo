@@ -1,4 +1,4 @@
-package com.optivem.eshop.smoketest;
+package com.optivem.atddaccelerator.template.systemtest.smoketest;
 
 import com.microsoft.playwright.*;
 import org.junit.jupiter.api.*;
