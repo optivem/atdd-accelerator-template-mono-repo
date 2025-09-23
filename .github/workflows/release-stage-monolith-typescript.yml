@@ -20,8 +20,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Release System
-      run: docker compose -f docker-compose.monolith-typescript.yml up -d
-      working-directory: ./
+      run: docker compose up -d
       # NOTE: In real life applications, you'd be deploying your System to some Environment
       # For this demo application, I'm using Docker Compose
 
