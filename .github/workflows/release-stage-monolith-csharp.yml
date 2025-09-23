@@ -10,7 +10,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: system-test/csharp
+        working-directory: system-test-csharp
 
     permissions:
       contents: read

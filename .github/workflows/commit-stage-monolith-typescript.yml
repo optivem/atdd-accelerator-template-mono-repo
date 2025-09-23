@@ -7,12 +7,12 @@ on:
   push:
     branches: [ "main" ]
     paths:
-        - 'system/monolith/typescript/**'
+        - 'monolith-typescript/**'
         - '.github/workflows/commit-stage-monolith-typescript.yml'
   pull_request:
     branches: [ "main" ]
     paths:
-        - 'system/monolith/typescript/**'
+        - 'monolith-typescript/**'
         - '.github/workflows/commit-stage-monolith-typescript.yml'
   workflow_dispatch:
 
@@ -23,7 +23,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: system/monolith/typescript
+        working-directory: monolith-typescript
 
     strategy:
       matrix:

@@ -10,7 +10,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: system-test/typescript
+        working-directory: system-test-typescript
 
     strategy:
       matrix:

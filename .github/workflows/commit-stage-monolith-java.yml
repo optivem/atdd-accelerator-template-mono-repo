@@ -4,12 +4,12 @@ on:
   push:
     branches: [ "main" ]
     paths:
-        - 'system/monolith/java/**'
+        - 'monolith-java/**'
         - '.github/workflows/commit-stage-monolith-java.yml'
   pull_request:
     branches: [ "main" ]
     paths:
-        - 'system/monolith/java/**'
+        - 'monolith-java/**'
         - '.github/workflows/commit-stage-monolith-java.yml'
   workflow_dispatch:
 
@@ -20,7 +20,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: system/monolith/java
+        working-directory: monolith-java
 
     permissions:
       contents: read
