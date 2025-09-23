@@ -1,4 +1,4 @@
-package com.optivem.eshop.monolith.controllers;
+package com.optivem.atddaccelerator.template.monolith.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +10,6 @@ public class HomeController {
     @GetMapping("/")
     @ResponseBody
     public String home() {
-        return "Welcome to the E-Shop Monolith Home Page!";
+        return "Hello World!";
     }
 }

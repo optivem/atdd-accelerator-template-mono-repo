@@ -1,4 +1,4 @@
-package com.optivem.eshop.monolith;
+package com.optivem.atddaccelerator.template.monolith;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

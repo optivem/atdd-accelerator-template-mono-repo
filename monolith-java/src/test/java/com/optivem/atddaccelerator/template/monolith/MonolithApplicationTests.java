@@ -1,4 +1,4 @@
-package com.optivem.eshop.monolith;
+package com.optivem.atddaccelerator.template.monolith;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
