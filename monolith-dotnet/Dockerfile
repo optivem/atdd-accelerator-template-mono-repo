@@ -16,4 +16,4 @@ WORKDIR /app
 COPY --from=build /app/out ./
 
 # Set the entry point
-ENTRYPOINT ["dotnet", "Optivem.EShop.Monolith.dll"]
+ENTRYPOINT ["dotnet", "Optivem.AtddAccelerator.Template.Monolith.dll"]
