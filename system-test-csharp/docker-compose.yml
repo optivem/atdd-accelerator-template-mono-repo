@@ -1,5 +1,5 @@
 services:
   monolith:
-    image: ghcr.io/optivem/atdd-accelerator/monolith-csharp:latest
+    image: ghcr.io/optivem/atdd-accelerator/monolith-dotnet:latest
     ports:
       - "8080:80"

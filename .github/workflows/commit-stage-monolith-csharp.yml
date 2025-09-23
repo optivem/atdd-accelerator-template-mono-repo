@@ -1,17 +1,17 @@
-name: commit-stage-monolith-csharp
+name: commit-stage-monolith-dotnet
 # Hello
 
 on:
   push:
     branches: [ "main" ]
     paths:
-        - 'monolith-csharp/**'
-        - '.github/workflows/commit-stage-monolith-csharp.yml'
+        - 'monolith-dotnet/**'
+        - '.github/workflows/commit-stage-monolith-dotnet.yml'
   pull_request:
     branches: [ "main" ]
     paths:
-        - 'monolith-csharp/**'
-        - '.github/workflows/commit-stage-monolith-csharp.yml'
+        - 'monolith-dotnet/**'
+        - '.github/workflows/commit-stage-monolith-dotnet.yml'
   workflow_dispatch:
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: monolith-csharp
+        working-directory: monolith-dotnet
 
     steps:
 
@@ -36,13 +36,13 @@ jobs:
       run: dotnet build
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag monolith-csharp:${{ github.sha }}
+      run: docker build . --file Dockerfile --tag monolith-dotnet:${{ github.sha }}
 
     - name: Log in to GitHub Container Registry
       run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
     - name: Tag Docker image
-      run: docker tag monolith-csharp:${{ github.sha }} ghcr.io/${{ github.repository }}/monolith-csharp:latest
+      run: docker tag monolith-dotnet:${{ github.sha }} ghcr.io/${{ github.repository }}/monolith-dotnet:latest
 
     - name: Push Docker image
-      run: docker push ghcr.io/${{ github.repository }}/monolith-csharp:latest
+      run: docker push ghcr.io/${{ github.repository }}/monolith-dotnet:latest
