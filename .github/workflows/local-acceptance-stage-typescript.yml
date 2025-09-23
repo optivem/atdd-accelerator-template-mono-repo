@@ -1,0 +1,48 @@
+name: local-acceptance-stage-typescript
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+        - 'system-test-typescript/**'
+        - '.github/workflows/local-acceptance-stage-typescript.yml'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+        - 'system-test-typescript/**'
+        - '.github/workflows/local-acceptance-stage-typescript.yml'
+  workflow_dispatch:
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: system-test-typescript
+
+    strategy:
+      matrix:
+        node-version: [22.x]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: system-test-typescript/package-lock.json
+    
+    - run: npm ci
+
+    - name: Install Playwright Browsers
+      run: npx playwright install
+
+    - name: Docker Compose Up
+      run: docker compose up -d
+
+    - name: Test
+      run: npm test

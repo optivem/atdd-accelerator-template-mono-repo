@@ -1,0 +1,46 @@
+name: local-acceptance-stage-dotnet
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+        - 'system-test-dotnet/**'
+        - '.github/workflows/local-acceptance-stage-dotnet.yml'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+        - 'system-test-dotnet/**'
+        - '.github/workflows/local-acceptance-stage-dotnet.yml'
+  workflow_dispatch:
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: system-test-dotnet
+
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    
+    - name: Build
+      run: dotnet build
+
+    - name: Install Playwright Browsers
+      run: pwsh bin/Debug/net8.0/playwright.ps1 install
+
+    - name: Docker Compose Up
+      run: docker compose up -d
+
+    - name: Smoke Tests
+      run: dotnet test --filter "FullyQualifiedName~Optivem.AtddAccelerator.Template.SystemTest.SmokeTests"
