@@ -1,4 +1,4 @@
-# ATDD Accelerator
+# ATDD Accelerator Template (Mono Repo)
 
 [![pages-build-deployment](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/pages/pages-build-deployment)
 
