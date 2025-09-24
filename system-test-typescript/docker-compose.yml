@@ -1,5 +1,8 @@
 services:
   monolith:
+    # TODO: Select one of the below, depending on which monolith you want to run
+    # image: ghcr.io/optivem/atdd-accelerator-template-mono-repo/monolith-java:latest
+    # image: ghcr.io/optivem/atdd-accelerator-template-mono-repo/monolith-dotnet:latest
     image: ghcr.io/optivem/atdd-accelerator-template-mono-repo/monolith-typescript:latest
     ports:
       - "8080:3000"
