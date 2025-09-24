@@ -1,5 +1,7 @@
 # ATDD Accelerator Template (Mono Repo)
 
+This is the ATDD Sandbox Project used within the [ATDD Accelerator Program](https://atdd-accelerator.optivem.com/) by [Valentina Jemuović](https://www.linkedin.com/in/valentinajemuovic/). We'll be using an eShop domain.
+
 [![pages-build-deployment](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/pages/pages-build-deployment)
 
 ## System
@@ -14,7 +16,6 @@
 [![release-stage-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-java.yml)
 [![release-stage-typescript](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-typescript.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/release-stage-typescript.yml)
 
-This is the ATDD Sandbox Project used within the [ATDD Accelerator Program](https://atdd-accelerator.optivem.com/) by [Valentina Jemuović](https://www.linkedin.com/in/valentinajemuovic/). We'll be using an eShop domain.
 
 ## Instructions
 
