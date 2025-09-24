@@ -1,4 +1,4 @@
-name: release-stage-monolith-java
+name: release-stage-java
 
 on:
   workflow_dispatch:

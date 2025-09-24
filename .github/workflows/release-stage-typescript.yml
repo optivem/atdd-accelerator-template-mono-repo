@@ -1,4 +1,4 @@
-name: release-stage-monolith-typescript
+name: release-stage-typescript
 
 on:
   workflow_dispatch:
