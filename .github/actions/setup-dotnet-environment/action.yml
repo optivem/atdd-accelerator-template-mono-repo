@@ -1,0 +1,33 @@
+name: 'Setup .NET Environment'
+description: 'Sets up .NET SDK, builds the project, and optionally installs Playwright browsers'
+inputs:
+  working-directory:
+    description: 'Working directory for the .NET project'
+    required: false
+    default: '.'
+  dotnet-version:
+    description: '.NET version to setup'
+    required: false
+    default: '8.0.x'
+  install-playwright:
+    description: 'Whether to install Playwright browsers'
+    required: false
+    default: 'false'
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ inputs.dotnet-version }}
+    
+    - name: Build
+      run: dotnet build
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+    
+    - name: Install Playwright Browsers
+      if: ${{ inputs.install-playwright == 'true' }}
+      run: pwsh bin/Debug/net8.0/playwright.ps1 install
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}

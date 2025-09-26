@@ -28,16 +28,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+    - name: Setup .NET Environment
+      uses: ./.github/actions/setup-dotnet-environment
       with:
+        working-directory: system-test-dotnet
         dotnet-version: 8.0.x
-    
-    - name: Build
-      run: dotnet build
-
-    - name: Install Playwright Browsers
-      run: pwsh bin/Debug/net8.0/playwright.ps1 install
+        install-playwright: true
 
     - name: Docker Compose Up
       run: docker compose up -d
