@@ -15,7 +15,7 @@ on:
 
 jobs:
   test:
-    uses: ./.github/workflows/java-test-template.yml
+    uses: ./.github/workflows/base-release-template-java.yml
     with:
       stage: "acceptance"
       deploy-step-name: "Deploy System"

@@ -5,7 +5,7 @@ on:
 
 jobs:
   release:
-    uses: ./.github/workflows/java-test-template.yml
+    uses: ./.github/workflows/base-release-template-java.yml
     with:
       stage: "qa"
       deploy-step-name: "Release System"
