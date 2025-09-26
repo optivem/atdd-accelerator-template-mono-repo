@@ -5,9 +5,27 @@ on:
 
 jobs:
   release:
-    uses: ./.github/workflows/base-release-template-java.yml
-    with:
-      stage: "qa"
-      deploy-step-name: "Release System"
-      run-acceptance-tests: false
-      run-e2e-tests: false
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: system-test-java
+
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Release System
+      run: docker compose up -d
+      # NOTE: In real life applications, you'd be deploying your System to some Environment
+      # For this demo application, I'm using Docker Compose
+
+    - name: Setup Java Environment
+      uses: ./.github/actions/setup-java-environment
+      with:
+        working-directory: system-test-java
+
+    - name: Run Smoke Tests
+      run: ./gradlew test --tests com.optivem.atddaccelerator.template.systemtest.smoketest.*
