@@ -21,6 +21,8 @@ jobs:
 
     - name: Release System
       uses: ./.github/actions/release-system
+      with:
+        working-directory: system-test-typescript
 
     - name: Setup TypeScript Environment
       uses: ./.github/actions/setup-typescript-environment

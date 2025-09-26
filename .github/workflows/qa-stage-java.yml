@@ -19,6 +19,8 @@ jobs:
 
     - name: Release System
       uses: ./.github/actions/release-system
+      with:
+        working-directory: system-test-java
 
     - name: Setup Java Environment
       uses: ./.github/actions/setup-java-environment
