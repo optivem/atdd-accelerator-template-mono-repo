@@ -1,16 +1,16 @@
-name: local-acceptance-stage-dotnet
+name: local-acceptance-stage-test-dotnet
 
 on:
   push:
     branches: [ "main" ]
     paths:
         - 'system-test-dotnet/**'
-        - '.github/workflows/local-acceptance-stage-dotnet.yml'
+        - '.github/workflows/local-acceptance-stage-test-dotnet.yml'
   pull_request:
     branches: [ "main" ]
     paths:
         - 'system-test-dotnet/**'
-        - '.github/workflows/local-acceptance-stage-dotnet.yml'
+        - '.github/workflows/local-acceptance-stage-test-dotnet.yml'
   workflow_dispatch:
 
 jobs:

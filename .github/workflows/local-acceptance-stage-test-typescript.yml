@@ -1,16 +1,16 @@
-name: local-acceptance-stage-typescript
+name: local-acceptance-stage-test-typescript
 
 on:
   push:
     branches: [ "main" ]
     paths:
         - 'system-test-typescript/**'
-        - '.github/workflows/local-acceptance-stage-typescript.yml'
+        - '.github/workflows/local-acceptance-stage-test-typescript.yml'
   pull_request:
     branches: [ "main" ]
     paths:
         - 'system-test-typescript/**'
-        - '.github/workflows/local-acceptance-stage-typescript.yml'
+        - '.github/workflows/local-acceptance-stage-test-typescript.yml'
   workflow_dispatch:
 
 jobs:
