@@ -1,6 +1,10 @@
 name: 'Setup Java Environment'
 description: 'Sets up JDK 21, Gradle, and makes Gradle wrapper executable'
 inputs:
+  working-directory:
+    description: 'Working directory for the Gradle project'
+    required: false
+    default: '.'
   java-version:
     description: 'Java version to setup'
     required: false
@@ -24,3 +28,4 @@ runs:
     - name: Make Gradle Wrapper executable
       run: chmod +x ./gradlew
       shell: bash
+      working-directory: ${{ inputs.working-directory }}

@@ -31,6 +31,8 @@ jobs:
       
       - name: Setup Java Environment
         uses: ./.github/actions/setup-java-environment
+        with:
+          working-directory: monolith-java
 
       - name: Build with Gradle Wrapper
         run: ./gradlew build
