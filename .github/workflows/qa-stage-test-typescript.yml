@@ -1,0 +1,19 @@
+name: qa-stage-test-typescript
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Release System and Run Tests
+      uses: ./.github/actions/release-system-test-typescript
+      with:
+        working-directory: system-test-typescript
