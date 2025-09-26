@@ -1,4 +1,4 @@
-name: release-stage-java
+name: qa-stage-java
 
 on:
   workflow_dispatch:

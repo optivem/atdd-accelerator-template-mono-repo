@@ -1,16 +1,16 @@
-name: local-acceptance-stage-java
+name: acceptance-stage-java
 
 on:
   push:
     branches: [ "main" ]
     paths:
         - 'system-test-java/**'
-        - '.github/workflows/local-acceptance-stage-java.yml'
+        - '.github/workflows/acceptance-stage-java.yml'
   pull_request:
     branches: [ "main" ]
     paths:
         - 'system-test-java/**'
-        - '.github/workflows/local-acceptance-stage-java.yml'
+        - '.github/workflows/acceptance-stage-java.yml'
   workflow_dispatch:
 
 jobs:
@@ -47,3 +47,9 @@ jobs:
 
     - name: Run Smoke Tests
       run: ./gradlew test --tests com.optivem.atddaccelerator.template.systemtest.smoketest.*
+
+    - name: Run Acceptance Tests
+      run: echo "Will run Acceptance Tests"
+
+    - name: Run E2E Tests
+      run: echo "Will run E2E Tests"
