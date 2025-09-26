@@ -18,9 +18,9 @@ This is the ATDD Sandbox Project used within the [ATDD Accelerator Program](http
 [![acceptance-stage-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/acceptance-stage-test-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/acceptance-stage-test-java.yml)
 [![acceptance-stage-typescript](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/acceptance-stage-test-typescript.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/acceptance-stage-test-typescript.yml)
 
-[![qa-stage-dotnet](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-dotnet.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-dotnet.yml)
-[![qa-stage-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-java.yml)
-[![qa-stage-typescript](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-typescript.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-typescript.yml)
+[![qa-stage-dotnet](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-test-dotnet.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-test-dotnet.yml)
+[![qa-stage-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-test-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-test-java.yml)
+[![qa-stage-typescript](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-test-typescript.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-test-typescript.yml)
 
 [![prod-stage-dotnet](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-dotnet.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-dotnet.yml)
 [![prod-stage-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-java.yml)
