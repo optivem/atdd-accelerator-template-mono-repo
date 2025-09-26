@@ -4,6 +4,11 @@ This is the ATDD Sandbox Project used within the [ATDD Accelerator Program](http
 
 [![pages-build-deployment](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/pages/pages-build-deployment)
 
+## Pipeline
+
+[![acceptance-stage-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/acceptance-stage-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/acceptance-stage-java.yml)
+[![qa-stage-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-java.yml)
+
 ## System
 
 [![commit-stage-monolith-dotnet](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/commit-stage-monolith-dotnet.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/commit-stage-monolith-dotnet.yml)
