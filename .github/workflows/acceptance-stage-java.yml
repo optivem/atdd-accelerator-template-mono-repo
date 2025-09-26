@@ -21,3 +21,10 @@ jobs:
       deploy-step-name: "Deploy System"
       run-acceptance-tests: true
       run-e2e-tests: true
+  
+  hello-world:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Hello World
+      run: echo "hello world"
