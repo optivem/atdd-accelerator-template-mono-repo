@@ -18,10 +18,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: monolith-java
-
     permissions:
       contents: read
       packages: write
@@ -36,6 +32,7 @@ jobs:
 
       - name: Build with Gradle Wrapper
         run: ./gradlew build
+        working-directory: monolith-java
 
       - name: Build and Push Docker Image
         uses: ./.github/actions/build-push-docker

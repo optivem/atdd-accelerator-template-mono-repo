@@ -1,4 +1,4 @@
-name: local-acceptance-stage-test-dotnet
+name: local-acceptance-stage-dotnet
 
 on:
   push:
