@@ -19,19 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Release System
-      uses: ./.github/actions/release-system
+    - name: Release System and Run Tests
+      uses: ./.github/actions/release-system-test-typescript
       with:
         working-directory: system-test-typescript
-
-    - name: Setup TypeScript Environment
-      uses: ./.github/actions/setup-typescript-environment
-      with:
-        working-directory: system-test-typescript
-        node-version: ${{ matrix.node-version }}
-        cache-dependency-path: system-test-typescript/package-lock.json
-        run-build: false
-        install-playwright: true
-
-    - name: Test
-      run: npm test
