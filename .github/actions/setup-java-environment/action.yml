@@ -1,0 +1,31 @@
+name: 'Setup Java Environment'
+description: 'Sets up JDK 21, Gradle, and makes Gradle wrapper executable'
+inputs:
+  working-directory:
+    description: 'Working directory for the Gradle project'
+    required: false
+    default: '.'
+  java-version:
+    description: 'Java version to setup'
+    required: false
+    default: '21'
+  java-distribution:
+    description: 'Java distribution to use'
+    required: false
+    default: 'temurin'
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up JDK ${{ inputs.java-version }}
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ inputs.java-version }}
+        distribution: ${{ inputs.java-distribution }}
+    
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4.0.0
+    
+    - name: Make Gradle Wrapper executable
+      run: chmod +x ./gradlew
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
