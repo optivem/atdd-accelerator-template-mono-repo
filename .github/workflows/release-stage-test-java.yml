@@ -1,4 +1,4 @@
-name: release-stage-java
+name: release-stage-test-java
 
 on:
   workflow_dispatch:

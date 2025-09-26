@@ -1,4 +1,4 @@
-name: release-stage-dotnet
+name: release-stage-test-dotnet
 
 on:
   workflow_dispatch:
