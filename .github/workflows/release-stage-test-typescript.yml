@@ -8,10 +8,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: system-test-typescript
-
     strategy:
       matrix:
         node-version: [22.x]

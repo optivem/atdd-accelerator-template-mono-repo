@@ -21,10 +21,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: monolith-typescript
-
     strategy:
       matrix:
         node-version: [22.x]
