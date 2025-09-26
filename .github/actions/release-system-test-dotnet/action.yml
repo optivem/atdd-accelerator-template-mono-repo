@@ -1,0 +1,26 @@
+name: 'Release System Test .NET'
+description: 'Releases the .NET system using Docker Compose, sets up .NET environment, and runs smoke tests'
+inputs:
+  working-directory:
+    description: 'Working directory where docker-compose.yml is located'
+    required: false
+    default: '.'
+runs:
+  using: 'composite'
+  steps:
+    - name: Release System
+      run: docker compose up -d
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      
+    - name: Setup .NET Environment
+      uses: ./.github/actions/setup-dotnet-environment
+      with:
+        working-directory: ${{ inputs.working-directory }}
+        dotnet-version: 8.0.x
+        install-playwright: true
+        
+    - name: Run Smoke Tests
+      run: dotnet test --filter "FullyQualifiedName~Optivem.AtddAccelerator.Template.SystemTest.SmokeTests"
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
