@@ -1,0 +1,24 @@
+name: 'Release System Test Java'
+description: 'Releases the Java system using Docker Compose, sets up Java environment, and runs smoke tests'
+inputs:
+  working-directory:
+    description: 'Working directory where docker-compose.yml is located'
+    required: false
+    default: '.'
+runs:
+  using: 'composite'
+  steps:
+    - name: Release System
+      run: docker compose up -d
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      
+    - name: Setup Java Environment
+      uses: ./.github/actions/setup-java-environment
+      with:
+        working-directory: ${{ inputs.working-directory }}
+        
+    - name: Run Smoke Tests
+      run: ./gradlew test --tests com.optivem.atddaccelerator.template.systemtest.smoketest.*
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
