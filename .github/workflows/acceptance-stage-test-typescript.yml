@@ -1,0 +1,45 @@
+name: acceptance-stage-test-typescript
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+        - 'system-test-typescript/**'
+        - '.github/workflows/acceptance-stage-test-typescript.yml'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+        - 'system-test-typescript/**'
+        - '.github/workflows/acceptance-stage-test-typescript.yml'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Release System and Run Tests
+      uses: ./.github/actions/release-system-test-typescript
+      with:
+        working-directory: system-test-typescript
+
+    - name: Run Acceptance Tests
+      run: echo "Run Acceptance Tests"
+
+    - name: Run External System Contract Tests
+      run: echo "Run External System Contract Tests"
+
+    - name: Run E2E Tests
+      run: echo "Run E2E Tests"
+  
+  hello-world:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Hello World
+      run: echo "hello world"
