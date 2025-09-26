@@ -1,0 +1,41 @@
+name: 'Build and Push Docker Image'
+description: 'Builds Docker image, logs in to GitHub Container Registry, and pushes the image'
+inputs:
+  working-directory:
+    description: 'Working directory where Dockerfile is located'
+    required: false
+    default: '.'
+  image-name:
+    description: 'Name of the Docker image'
+    required: true
+  github-token:
+    description: 'GitHub token for registry authentication'
+    required: true
+  github-actor:
+    description: 'GitHub actor for registry authentication'
+    required: true
+  github-repository:
+    description: 'GitHub repository for image tagging'
+    required: true
+  github-sha:
+    description: 'GitHub SHA for image tagging'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag ${{ inputs.image-name }}:${{ inputs.github-sha }}
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+
+    - name: Log in to GitHub Container Registry
+      run: echo ${{ inputs.github-token }} | docker login ghcr.io -u ${{ inputs.github-actor }} --password-stdin
+      shell: bash
+
+    - name: Tag Docker image
+      run: docker tag ${{ inputs.image-name }}:${{ inputs.github-sha }} ghcr.io/${{ inputs.github-repository }}/${{ inputs.image-name }}:latest
+      shell: bash
+
+    - name: Push Docker image
+      run: docker push ghcr.io/${{ inputs.github-repository }}/${{ inputs.image-name }}:latest
+      shell: bash

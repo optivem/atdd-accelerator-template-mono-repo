@@ -33,14 +33,10 @@ jobs:
         working-directory: system-test-java
 
     - name: Run Acceptance Tests
-      run: echo "Will run Acceptance Tests"
+      run: echo "Run Acceptance Tests"
+
+    - name: Run External System Contract Tests
+      run: echo "Run External System Contract Tests"
 
     - name: Run E2E Tests
-      run: echo "Will run E2E Tests"
-  
-  hello-world:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - name: Print Hello World
-      run: echo "hello world"
+      run: echo "Run E2E Tests"
