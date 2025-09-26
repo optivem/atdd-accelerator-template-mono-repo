@@ -1,11 +1,10 @@
-name: release-stage-test-java
+name: qa-stage-java
 
 on:
   workflow_dispatch:
 
 jobs:
   release:
-
     runs-on: ubuntu-latest
 
     defaults:

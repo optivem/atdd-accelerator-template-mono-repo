@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Release System and Run Tests
+    - name: Release System
       uses: ./.github/actions/release-system-test-typescript
       with:
         working-directory: system-test-typescript
