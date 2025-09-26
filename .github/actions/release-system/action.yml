@@ -1,0 +1,10 @@
+name: 'Release System'
+description: 'Releases the system using Docker Compose'
+runs:
+  using: 'composite'
+  steps:
+    - name: Release System
+      run: docker compose up -d
+      shell: bash
+      # NOTE: In real life applications, you'd be deploying your System to some Environment
+      # For this demo application, I'm using Docker Compose

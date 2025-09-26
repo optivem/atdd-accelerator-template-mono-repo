@@ -27,10 +27,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Deploy System
-      run: docker compose up -d
-      # NOTE: In real life applications, you'd be deploying your System to some Environment
-      # For this demo application, I'm using Docker Compose
+    - name: Release System
+      uses: ./.github/actions/release-system
 
     - name: Setup Java Environment
       uses: ./.github/actions/setup-java-environment
