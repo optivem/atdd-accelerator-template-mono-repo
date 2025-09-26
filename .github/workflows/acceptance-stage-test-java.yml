@@ -1,16 +1,16 @@
-name: acceptance-stage-java
+name: acceptance-stage-test-java
 
 on:
   push:
     branches: [ "main" ]
     paths:
         - 'system-test-java/**'
-        - '.github/workflows/acceptance-stage-java.yml'
+        - '.github/workflows/acceptance-stage-test-java.yml'
   pull_request:
     branches: [ "main" ]
     paths:
         - 'system-test-java/**'
-        - '.github/workflows/acceptance-stage-java.yml'
+        - '.github/workflows/acceptance-stage-test-java.yml'
   workflow_dispatch:
 
 jobs:
