@@ -22,9 +22,9 @@ This is the ATDD Sandbox Project used within the [ATDD Accelerator Program](http
 [![qa-stage-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-test-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-test-java.yml)
 [![qa-stage-typescript](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-test-typescript.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/qa-stage-test-typescript.yml)
 
-[![prod-stage-dotnet](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-dotnet.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-dotnet.yml)
-[![prod-stage-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-java.yml)
-[![prod-stage-typescript](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-typescript.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-typescript.yml)
+[![prod-stage-dotnet](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-test-dotnet.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-test-dotnet.yml)
+[![prod-stage-java](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-test-java.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-test-java.yml)
+[![prod-stage-typescript](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-test-typescript.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-mono-repo/actions/workflows/prod-stage-test-typescript.yml)
 
 ## Instructions
 
