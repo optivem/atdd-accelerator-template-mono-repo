@@ -27,7 +27,6 @@ jobs:
     - name: Setup TypeScript Environment
       uses: ./.github/actions/setup-typescript-environment
       with:
-        working-directory: system-test-typescript
         node-version: ${{ matrix.node-version }}
         cache-dependency-path: system-test-typescript/package-lock.json
         run-build: false

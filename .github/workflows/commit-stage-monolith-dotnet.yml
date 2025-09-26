@@ -30,7 +30,6 @@ jobs:
     - name: Setup .NET Environment
       uses: ./.github/actions/setup-dotnet-environment
       with:
-        working-directory: monolith-dotnet
         dotnet-version: 6.0.x
         install-playwright: false
 

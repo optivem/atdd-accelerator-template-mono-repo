@@ -24,8 +24,6 @@ jobs:
 
     - name: Setup Java Environment
       uses: ./.github/actions/setup-java-environment
-      with:
-        working-directory: system-test-java
 
     - name: Run Smoke Tests
       run: ./gradlew test --tests com.optivem.atddaccelerator.template.systemtest.smoketest.*

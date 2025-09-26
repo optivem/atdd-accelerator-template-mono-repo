@@ -30,8 +30,6 @@ jobs:
 
     - name: Setup Java Environment
       uses: ./.github/actions/setup-java-environment
-      with:
-        working-directory: system-test-java
 
     - name: Docker Compose Up
       run: docker compose up -d
