@@ -29,17 +29,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
+    - name: Setup TypeScript Environment
+      uses: ./.github/actions/setup-typescript-environment
       with:
+        working-directory: system-test-typescript
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
         cache-dependency-path: system-test-typescript/package-lock.json
-    
-    - run: npm ci
-
-    - name: Install Playwright Browsers
-      run: npx playwright install
+        run-build: false
+        install-playwright: true
 
     - name: Docker Compose Up
       run: docker compose up -d

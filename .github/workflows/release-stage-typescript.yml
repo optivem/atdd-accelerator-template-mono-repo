@@ -24,17 +24,14 @@ jobs:
       # NOTE: In real life applications, you'd be deploying your System to some Environment
       # For this demo application, I'm using Docker Compose
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
+    - name: Setup TypeScript Environment
+      uses: ./.github/actions/setup-typescript-environment
       with:
+        working-directory: system-test-typescript
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
         cache-dependency-path: system-test-typescript/package-lock.json
-    
-    - run: npm ci
-
-    - name: Install Playwright Browsers
-      run: npx playwright install
+        run-build: false
+        install-playwright: true
 
     - name: Test
       run: npm test
