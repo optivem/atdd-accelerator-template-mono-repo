@@ -2,6 +2,11 @@
 
 ## Instructions
 
+Setup
+```shell
+npm install
+```
+
 Docker Compose Up
 
 ```shell
