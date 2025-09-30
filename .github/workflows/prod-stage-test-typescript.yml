@@ -13,7 +13,8 @@ jobs:
         node-version: [22.x]
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
     - name: Release System
       uses: ./.github/actions/release-system-test-typescript

@@ -23,7 +23,6 @@ jobs:
       packages: write
 
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v4
       

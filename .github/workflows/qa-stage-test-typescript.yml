@@ -11,7 +11,8 @@ jobs:
       contents: read
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
     - name: Release System and Run Tests
       uses: ./.github/actions/release-system-test-typescript

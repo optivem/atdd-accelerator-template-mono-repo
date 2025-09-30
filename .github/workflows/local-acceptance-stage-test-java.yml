@@ -26,7 +26,8 @@ jobs:
       contents: read
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
     - name: Setup Java Environment
       uses: ./.github/actions/setup-java-environment
