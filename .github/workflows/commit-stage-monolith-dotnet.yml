@@ -1,5 +1,4 @@
 name: commit-stage-monolith-dotnet
-# Hello
 
 on:
   push:
@@ -19,9 +18,14 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      packages: write
+
     steps:
 
-    - uses: actions/checkout@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
     - name: Setup .NET Environment
       uses: ./.github/actions/setup-dotnet-environment
