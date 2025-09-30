@@ -37,10 +37,3 @@ jobs:
 
     - name: Run E2E Tests
       run: echo "Run E2E Tests"
-  
-  hello-world:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - name: Print Hello World
-      run: echo "hello world"

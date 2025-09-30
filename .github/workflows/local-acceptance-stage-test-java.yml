@@ -15,15 +15,14 @@ on:
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
 
     defaults:
       run:
         working-directory: system-test-java
-
-    permissions:
-      contents: read
 
     steps:
     - name: Checkout Repository
