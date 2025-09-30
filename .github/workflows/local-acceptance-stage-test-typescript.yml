@@ -25,10 +25,6 @@ jobs:
     permissions:
       contents: read
 
-    strategy:
-      matrix:
-        node-version: [22.x]
-
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
@@ -37,7 +33,7 @@ jobs:
       uses: ./.github/actions/setup-typescript-environment
       with:
         working-directory: system-test-typescript
-        node-version: ${{ matrix.node-version }}
+        node-version: 22.x
         cache-dependency-path: system-test-typescript/package-lock.json
         run-build: false
         install-playwright: true
