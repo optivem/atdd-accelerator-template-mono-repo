@@ -1,4 +1,4 @@
-# ATDD Accelerator Template (Mono Repo)
+# ATDD Accelerator Template
 
 This is the ATDD Sandbox Project used within the [ATDD Accelerator Program](https://atdd-accelerator.optivem.com/) by [Valentina Jemuović](https://www.linkedin.com/in/valentinajemuovic/). We'll be using an eShop domain.
 
